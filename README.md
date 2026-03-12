@@ -1,1 +1,1 @@
-# Apenas estudo em python
+# Apenas estudos em python
