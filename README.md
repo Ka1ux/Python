@@ -1,1 +1,1 @@
-# Python
+# Apenas estudo em python
