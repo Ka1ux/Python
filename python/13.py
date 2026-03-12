@@ -1,0 +1,46 @@
+class Carro:
+    def __init__(self, nome):
+        self.nome = nome
+        self._motor = None
+        self._fabricante = None
+
+    @property
+    def motor(self):
+        return self._motor
+    
+    @motor.setter
+    def motor(self, valor):
+        self._motor = valor
+
+    @property
+    def fabricante(self):
+        return self._fabricante
+    
+    @fabricante.setter
+    def fabricante(self, valor):
+        self._fabricante = valor
+
+    
+    
+class Motor:
+    def __init__(self, nome):
+        self.nome = nome
+
+class Fabricante:
+    def __init__(self, nome):
+        self.nome = nome
+
+
+fusca = Carro('Fusca')
+Volkswagen = Fabricante('Volkswagen')
+motor_1_0 = Motor('1.0')
+fusca.fabricante = Fabricante('Volkswagen')
+fusca.motor = Motor('1.0')
+print(fusca.nome, fusca.fabricante.nome, fusca.motor.nome)
+
+fiat_uno = Carro('Fiat Uno')
+fiat_uno.fabricante = Fabricante('Fiat')
+fiat_uno.motor = Motor('1.0')
+fiat = Fabricante('Fiat')
+fiat = Motor('1.0')
+print(fiat_uno.nome, fiat_uno.fabricante.nome, fiat_uno.motor.nome)
